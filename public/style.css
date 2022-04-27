@@ -28,16 +28,15 @@ button {
   height: 65px;
   background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
 }
 
 .navbar__content {
-  display: flex;
+  margin: 0 auto;
   max-width: 550px;
-  align-items: center;
   padding-left: 20px;
   padding-right: 37px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .navbar__image {
@@ -49,11 +48,70 @@ button {
 .navbar__title {
   font-size: 1.3125rem;
   font-weight: 700;
-  letter-spacing: -10%;
+  letter-spacing: -0.1em;
   margin-right: auto;
 }
 
 .navbar__description {
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+@media (max-width: 355px) {
+  .navbar__title,
+  .navbar__description {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+}
+
+.content {
+  margin: 50px auto;
+  max-width: 550px;
+  height: 485px;
+}
+
+.memeGenerator {
+  margin: 0 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 550px) {
+  .memeGenerator {
+    justify-content: center;
+  }
+}
+
+.meme__input {
+  width: 230px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #0d0d0d;
+  text-indent: 10px;
+  margin-bottom: 15px;
+}
+
+.meme__button {
+  max-width: 477px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.1em;
+}
+
+.button__image {
+  margin-left: 5px;
 }
