@@ -115,3 +115,10 @@ button {
 .button__image {
   margin-left: 5px;
 }
+
+.meme__image {
+  margin: 36px auto;
+  max-width: 100%;
+  max-height: 268px;
+  border-radius: 2px;
+}
