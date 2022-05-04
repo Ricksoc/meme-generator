@@ -9,15 +9,16 @@ function Meme() {
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
 
-  const [allMemeImages, setAllMemeImages] = useState({ memesData });
+  const [allMemeImages, setAllMemeImages] = useState(memesData);
 
   function getMemeImage() {
-    const memesArray = memesData.data.memes;
+    const memesArray = allMemeImages.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     const memeUrl = memesArray[randomNumber].url;
-    setMeme((prevValue) => {
-      return { ...prevValue, randomImage: memeUrl };
-    });
+    setMeme((prevValue) => ({
+      ...prevValue,
+      randomImage: memeUrl,
+    }));
   }
 
   return (
@@ -39,7 +40,11 @@ function Meme() {
         <img src={buttonImage} alt="" className="button__image" />{" "}
       </button>
 
-      <img src={meme.randomImage} alt="Meme" className="meme__image" />
+      <div className="meme">
+        <img src={meme.randomImage} alt="Meme" className="meme__image" />
+        <h2 className="meme__text top">Top Text</h2>
+        <h2 className="meme__text bottom">Bottom Text</h2>
+      </div>
     </div>
   );
 }
